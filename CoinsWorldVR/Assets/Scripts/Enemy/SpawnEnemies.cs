@@ -10,8 +10,8 @@ public class SpawnEnemies : MonoBehaviour
 
     private TerrainCollider terrainCollider;
 
-    private int numberOfEnemyOne = 30;
-    private int numberOfEnemyTwo = 20;
+    private int numberOfEnemyOne = 50;
+    private int numberOfEnemyTwo = 40;
 
     // Start is called before the first frame update
     void Awake()

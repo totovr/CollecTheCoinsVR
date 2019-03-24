@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EffectSoundsManager : MonoBehaviour
 {
-    public List<AudioClip> CoinsAudio = new List<AudioClip>();
     public List<AudioClip> ShootAudio = new List<AudioClip>();
     public List<AudioClip> DamageAudio = new List<AudioClip>();
     public List<AudioClip> KilledAudio = new List<AudioClip>();
@@ -17,15 +16,7 @@ public class EffectSoundsManager : MonoBehaviour
     void Start()
     {
         effectsAudioSource = gameObject.AddComponent<AudioSource>();
-    }
-
-    void CoinCollectedSound()
-    {
-        randomNumber = Random.Range(0, 61);
-        effectsAudioSource.clip = CoinsAudio[randomNumber];
-        effectsAudioSource.priority = 1;
-        effectsAudioSource.Play();
-        effectsAudioSource.priority = 128;
+        effectsAudioSource.priority = 200;
     }
 
     public void ShootTheGunSound()

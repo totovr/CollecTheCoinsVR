@@ -14,6 +14,7 @@ public class BackGroundSound : MonoBehaviour
     {
         backGroundAudioSource = gameObject.AddComponent<AudioSource>();
         backGroundAudioSource.clip = backGroundClips[1];
+        backGroundAudioSource.volume = 0.5f;
         backGroundAudioSource.Play();
     }
  

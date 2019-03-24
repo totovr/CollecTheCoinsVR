@@ -15,14 +15,14 @@ public class InputController : MonoBehaviour {
     private float bulletReloadDelay = 2.0f;
     private float countDownTimerStartTime;
 
-    private GameObject VROculusController;
+    private GameObject OVRculusController;
     private OVRPlayerController playerController;
 
     void Start()
     {
         shootSound = GetComponent<EffectSoundsManager>();
-        VROculusController = GameObject.FindGameObjectWithTag("PlayerFPS");
-        playerController = VROculusController.GetComponent<OVRPlayerController>();
+        OVRculusController = GameObject.FindGameObjectWithTag("PlayerFPS");
+        playerController = OVRculusController.GetComponent<OVRPlayerController>();
     }
 
     // Update is called once per frame
@@ -45,7 +45,7 @@ public class InputController : MonoBehaviour {
             playerController.Acceleration = 0.25f;
         }
 
-        //if (OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger) && GameManager.sharedInstance.currentGameState == GameState.inTheGame)
+        //if (OVRInput.Get(OVRInput.Button.PrimaryHandTrigger) && GameManager.sharedInstance.currentGameState == GameState.inTheGame)
         //{
         //    playerController.Jump();
         //}

@@ -92,6 +92,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0965cfd2c385f4107b2b67d1279f5057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CoinsAudio:
+  - {fileID: 8300000, guid: fdbc7f55c83d25046b58dc16a7fc97f2, type: 3}
   Type: 0
   CoinMaterials:
   - {fileID: 2100000, guid: 030405fc66f404d99bd4b856c1c747e4, type: 2}
@@ -120,5 +122,5 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.95
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  m_Radius: 1.9446526
+  m_Center: {x: 0.44465256, y: 0, z: -0.00000011920929}

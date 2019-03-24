@@ -81,7 +81,8 @@ public class EnemyController : MonoBehaviour
         enemyAnimator = GetComponent<EnemyAnimations>();
         enemyTypeDamage = GetComponent<EnemyTypes>();
         enemySound = GetComponent<EnemySoundEffect>();
-        player = GameObject.FindWithTag("PlayerFPS").transform;
+        // player = GameObject.FindWithTag("PlayerFPS").transform;
+        player = GameObject.FindWithTag("PlayerScripts").transform;
         timeBtwShots = startTimeBtwShots;
     }
 

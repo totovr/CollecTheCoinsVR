@@ -82,7 +82,8 @@ public class EnemyNotStaticController : MonoBehaviour
         enemyAnimatorPositions = GetComponent<EnemyNotStaticAnimations>();
         enemyTypeDamage = GetComponent<EnemyTypes>();
         enemySound = GetComponent<EnemySoundEffect>();
-        player = GameObject.FindWithTag("PlayerFPS").transform;
+        // player = GameObject.FindWithTag("PlayerFPS").transform;
+        player = GameObject.FindWithTag("PlayerScripts").transform;
         timeBtwShots = startTimeBtwShots;
     }
 

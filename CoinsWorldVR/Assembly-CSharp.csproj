@@ -366,6 +366,7 @@
      <Compile Include="Assets\Scripts\Player\HealthBar.cs" />
      <Compile Include="Assets\Scripts\Player\HitPlayer.cs" />
      <Compile Include="Assets\Scripts\Player\InputController.cs" />
+     <Compile Include="Assets\Scripts\Player\JumpVR.cs" />
      <Compile Include="Assets\Scripts\Sound\BackGroundSound.cs" />
      <Compile Include="Assets\Scripts\Sound\EffectSoundsManager.cs" />
      <Compile Include="Assets\Scripts\UI\UICoins.cs" />

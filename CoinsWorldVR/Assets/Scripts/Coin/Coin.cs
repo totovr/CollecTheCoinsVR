@@ -6,6 +6,10 @@ public enum CoinType { BRONZE, SILVER, GOLD };
 
 public class Coin : MonoBehaviour
 {
+    public List<AudioClip> CoinsAudio = new List<AudioClip>();
+    private AudioSource effectsAudioSource;
+    int randomNumber;
+
     public CoinType Type;
 
     private CoinType _type;
@@ -48,10 +52,19 @@ public class Coin : MonoBehaviour
         CoinsCounter += coinValue;
     }
 
+    void Start()
+    {
+        effectsAudioSource = gameObject.AddComponent<AudioSource>();
+        // effectsAudioSource.priority = 1;
+    }
+
     private void OnTriggerEnter(Collider collider)
     {
-        if (collider.CompareTag("Player") || collider.CompareTag("PlayerFPS"))
+        // collider.CompareTag("Player") || collider.CompareTag("PlayerFPS")
+        if (collider.CompareTag("PlayerScripts") || collider.CompareTag("PlayerFPS"))
         {
+            CoinCollectedSound();
+
             CoinsCounter -= coinValue;
             UICoins.sharedInstance.UpdateCoins();
 
@@ -72,6 +85,16 @@ public class Coin : MonoBehaviour
             // Invoke("GameManager.sharedInstance.GameWon", 2);
             GameManager.sharedInstance.GameWon();
         }
+    }
+
+    void CoinCollectedSound()
+    {
+        Debug.Log("Sound");
+        randomNumber = 0;
+        effectsAudioSource.clip = CoinsAudio[randomNumber];
+        //effectsAudioSource.priority = 1;
+        //effectsAudioSource.volume = 1;
+        effectsAudioSource.Play();
     }
 
 }

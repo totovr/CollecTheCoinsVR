@@ -25,7 +25,7 @@ public class HitPlayer : MonoBehaviour
 
             if (playerLivesCounter <= playerLifes)
             {
-                // pgmControl.EnemyOneActuation();
+                pgmControl.EnemyOneActuation();
                 GameObject.FindGameObjectWithTag("HealthBar").SendMessage("UpdateHealthBar", damageTaken);
                 effectSoundsManager.PlayerReceivedDamaged();
             }
@@ -44,7 +44,7 @@ public class HitPlayer : MonoBehaviour
 
             if (playerLivesCounter <= playerLifes)
             {
-                // pgmControl.EnemyTwoActuation();
+                pgmControl.EnemyTwoActuation();
                 GameObject.FindGameObjectWithTag("HealthBar").SendMessage("UpdateHealthBar", damageTaken * 4);
                 effectSoundsManager.PlayerReceivedDamaged();
             }
